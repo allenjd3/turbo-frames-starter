@@ -1,0 +1,17 @@
+created:
+    - app/Http/Controllers/ItemController.php
+    - database/factories/ItemFactory.php
+    - database/migrations/2021_03_21_174616_create_items_table.php
+    - app/Models/Item.php
+    - tests/Feature/Http/Controllers/ItemControllerTest.php
+    - app/Http/Requests/ItemStoreRequest.php
+    - app/Http/Requests/ItemUpdateRequest.php
+    - resources/views/item/index.blade.php
+    - resources/views/item/create.blade.php
+    - resources/views/item/show.blade.php
+    - resources/views/item/edit.blade.php
+updated:
+    - routes/web.php
+models:
+    Models\User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
+    Item: { name: string }

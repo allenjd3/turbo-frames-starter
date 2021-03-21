@@ -1,0 +1,28 @@
+models:
+    Item:
+        name: string
+controllers:
+    Item:
+        index:
+            query: all
+            render: item.index with:items
+        create:
+            render: item.create
+        show:
+            render: item.show with:item
+        store:
+            validate: name
+            save: item
+            flash: item.name
+            redirect: item.index
+        edit:
+            render: item.edit with:item
+        update:
+            validate: name
+            update: item
+            flash: item.name
+            redirect: item.index
+        destroy:
+            delete: item
+            redirect: item.index
+
