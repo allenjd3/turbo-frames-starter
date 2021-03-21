@@ -3,8 +3,10 @@
 namespace Tests\Feature\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Auth;
 use JMac\Testing\Traits\AdditionalAssertions;
 use Tests\TestCase;
 
@@ -14,6 +16,17 @@ use Tests\TestCase;
 class ItemControllerTest extends TestCase
 {
     use AdditionalAssertions, RefreshDatabase, WithFaker;
+
+    public $user; 
+
+    protected function setUp() : void {
+
+        parent::setUp();
+
+        $user = User::factory()->create();
+        Auth::login($user);
+        $this->user = $user;
+    }
 
     /**
      * @test
