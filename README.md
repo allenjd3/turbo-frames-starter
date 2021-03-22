@@ -1,5 +1,7 @@
 # Quick Project for Testing Turbo
 
+Note: This is for setting up with Docker and Sail
+
 First, clone the project into a file
 
 ```bash
