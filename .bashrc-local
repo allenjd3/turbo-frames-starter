@@ -1,1 +1,5 @@
 alias sail=./vendor/bin/sail
+
+function run_init() {
+    docker run --rm -v ${PWD}:/app -w /app -u 1000:1000 composer:latest composer install
+}
