@@ -12,8 +12,15 @@ Then run -
 cd turbo-frames-starter
 cp .env.example .env
 source .bashrc-local
-sail up
+```
+Once you source the .bashrc-local you can run 
+
+```bash
+run_init
+sail up -d
+sail artisan key:generate
+sail artisan migrate
 ```
 
-To get the project running in a docker container
+Then go watch the vid!
 
